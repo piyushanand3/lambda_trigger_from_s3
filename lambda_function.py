@@ -25,7 +25,7 @@ def lambda_handler(event, context):
     logger.info(f"Object name: {object_name}")
 
     # Check if the folder name starts with "folder=" and if the object name is "_demo"
-    if not (folder.startswith('instance_id=') and object_name == "_demo"):
+    if not (folder.startswith('host_id=') and object_name == "_demo"):
         return  # Ignore Lambda execution
 
     # Perform your desired actions here
