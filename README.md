@@ -21,7 +21,14 @@ How can I configure an AWS Lambda function to trigger only when the S3 bucket "t
 
 1. Create a lambda and use the python function
 2. Create a event in S3 bucket then
-   ### Edit event notification
+
+   ----------------------------------
+
+   Important: Create bucket in same reason as Lambda Function
+
+   -----------------------------------
+
+## create a event notification in s3 bucket properties. 
 a.**General configuration**
 
    ![alt text](https://github.com/piyushanand3/lambda_trigger_from_s3/blob/main/Screenshot%20from%202023-06-02%2013-19-27.png?raw=true)
@@ -31,3 +38,27 @@ b.**Event types**
 c.**Destination**
 
    ![alt text](https://github.com/piyushanand3/lambda_trigger_from_s3/blob/main/Screenshot%20from%202023-06-02%2013-20-31.png?raw=true)
+
+1. Test case in lambda
+```json
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "us-east-1",
+      "eventTime": "2023-05-26T00:00:00.000Z",
+      "eventName": "ObjectCreated:Put",
+      "s3": {
+        "bucket": {
+          "name": "transend"
+        },
+        "object": {
+          "key": "EMR/data/RECORDS_ID/host_id=YYYYMMDD/_demo",
+          "size": 1024
+        }
+      }
+    }
+  ]
+}
+```
