@@ -24,7 +24,9 @@ How can I configure an AWS Lambda function to trigger only when the S3 bucket "t
 
    ----------------------------------
 
-   Important: Create bucket in same reason as Lambda Function
+   Important:
+   > a. Create bucket in same reason as Lambda Function
+   > b. Give proper permission to lambda to execute s3 event
 
    -----------------------------------
 
