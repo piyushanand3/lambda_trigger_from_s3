@@ -20,5 +20,14 @@ How can I configure an AWS Lambda function to trigger only when the S3 bucket "t
 ## Steps to execute:
 
 1. Create a lambda and use the python function
-2. Create a event in S3 bucket with put method
+2. Create a event in S3 bucket then
+   ### Edit event notification
+**a.General configuration
+**
    ![alt text](https://github.com/piyushanand3/lambda_trigger_from_s3/blob/main/Screenshot%20from%202023-06-02%2013-19-27.png?raw=true)
+**b.Event types
+**
+   ![alt text](https://github.com/piyushanand3/lambda_trigger_from_s3/blob/main/Screenshot%20from%202023-06-02%2013-19-44.png?raw=true)
+**c.Destination
+**
+   ![alt text](https://github.com/piyushanand3/lambda_trigger_from_s3/blob/main/Screenshot%20from%202023-06-02%2013-20-31.png?raw=true)
